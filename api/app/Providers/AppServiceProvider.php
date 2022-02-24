@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Src\Domain\Article\ArticleRepository;
+use Src\Infra\ArticleRepositoryInfra;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->bind(ArticleRepository::class, ArticleRepositoryInfra::class);
     }
 }

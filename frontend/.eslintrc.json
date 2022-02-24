@@ -43,7 +43,7 @@
   },
   "overrides": [
     {
-      "files": ["modules/**/*.ts"],
+      "files": ["src/modules/**/*.ts"],
       "rules": {
         "react-hooks/rules-of-hooks": "off"
       }
